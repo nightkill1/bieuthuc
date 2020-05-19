@@ -9,12 +9,23 @@ package bieuthuc;
  *
  * @author hoang
  */
-public abstract class BieuthucDecorator extends bieu_thuc{
+public class BieuthucDecorator extends bieu_thuc{
+bieu_thuc bieu_thuc;
+    
+    @Override
+    public float giaTri() {
+        return bieu_thuc.giaTri();
+    }
+
+    @Override
+    public String bieuThuc() {
+        return bieu_thuc.bieuThuc();
+    }
 
     public BieuthucDecorator(bieu_thuc bieuthuc) {
-        this.bieuthuc = bieuthuc;
+        this.bieu_thuc = bieuthuc;
     }
-    bieu_thuc bieuthuc;
+    
     
     
 }

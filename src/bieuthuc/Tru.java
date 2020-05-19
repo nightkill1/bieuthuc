@@ -18,13 +18,13 @@ public class Tru extends BieuthucDecorator{
 
     @Override
     public float giaTri() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return super.giaTri() - toanHang;
     }
 
-    private int toanHang;
+    float toanHang;
 
     @Override
     public String bieuThuc() {
-        return bieuThuc()+"-"+ toanHang;
+        return super.bieuThuc()+"-"+ toanHang;
     }
 }

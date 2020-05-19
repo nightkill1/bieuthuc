@@ -11,9 +11,14 @@ package bieuthuc;
  */
 public class Nhan extends BieuthucDecorator{
 
-    private int toangHang;
+   float toangHang;
 
-    public int getToangHang() {
+   
+   public Nhan(int toanHang, bieu_thuc bieuthuc){
+       super(bieuthuc);
+        this.toangHang = toanHang;
+   }
+    public float getToangHang() {
         return toangHang;
     }
 
@@ -22,12 +27,12 @@ public class Nhan extends BieuthucDecorator{
     }
     @Override
     public float giaTri() {
-        return bieuthuc.giaTri() * toangHang;
+          return super.giaTri() * toangHang;
     }
 
     @Override
     public String bieuThuc() {
-        return "*"+this.toangHang;
+        return   super.bieuThuc() + "*"+this.toangHang;
     }
 
     

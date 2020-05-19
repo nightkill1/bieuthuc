@@ -28,7 +28,7 @@ public class Cong  extends BieuthucDecorator{
 
     @Override
     public String bieuThuc() {
-        return "+"+this.toanHang; //To change body of generated methods, choose Tools | Templates.
+        return super.bieuThuc() + " + " + this.toanHang + " = "; //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

@@ -15,16 +15,16 @@ public class Chia extends BieuthucDecorator{
         super(bieuthuc);
         this.toanHang = toanHang;
     }
-    private int toanHang;
+    float toanHang;
 
     @Override
     public String bieuThuc() {
-        return "/" + toanHang; //To change body of generated methods, choose Tools | Templates.
+        return super.bieuThuc() +"/" + toanHang; //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public float giaTri() {
-        return bieuthuc.giaTri() / toanHang; //To change body of generated methods, choose Tools | Templates.
+        return  super.giaTri() / toanHang;  //To change body of generated methods, choose Tools | Templates.
     }
 
     

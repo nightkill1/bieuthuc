@@ -17,15 +17,9 @@ public class Bieuthuc {
     public static void main(String[] args) {
         // TODO code application logic here
         bieu_thuc bt = new toanHangDonGian(10);
-        System.out.print(bt.giaTri());
-        bt = new Chia(5,bt);
-        System.out.print(bt.giaTri());
-        System.out.print(bt.bieuThuc());
-        bt = new Cong(10,bt);
-        System.out.print(bt.giaTri());
-        System.out.print(bt.bieuThuc());
-        System.out.print("=");
-        System.out.print(bt.giaTri());
+        
+        BieuthucDecorator btdc = new Nhan(5, bt);
+        System.out.println(btdc.bieuThuc()+ btdc.giaTri());
         
         
         
